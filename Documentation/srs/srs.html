@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        
+        .tittle {
+            text-align: right;
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav {
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3F4A59;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: #FFFFFF;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dropdown-btn {
+            font-size: 19px;
+            padding-bottom: 5px;
+        }
+        /* On mouse-over */
+        
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            background-color: #fff;
+            color: #3F4A59;
+        }
+        /* Main content */
+        
+        .main {
+            margin-left: 300px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+        }
+        /*Section Content */
+        
+        .section {
+            padding-left: 18px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            background-color: #f9f9f9;
+            color: #3F4A59;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container {
+            display: none;
+            background-color: none;
+            padding-left: 8px;
+            font-size: 16px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <button class="dropdown-btn"> 1.  Introduction
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#1.1">1.1 Purpose</a>
+            <a href="#1.2">1.2 Document Convention</a>
+            <a href="#1.3">1.3 Intended Audience and Reading Suggestions</a>
+            <a href="#1.4">1.4 Product Scope</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 2.  Overall Description
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#2.1">2.1 Product Perspective</a>
+            <a href="#2.2">2.2 Product Function</a>
+            <a href="#2.3">2.3 User Class and Characteristics</a>
+            <a href="#2.4">2.4 Operating Enviornment</a>
+            <a href="#2.5">2.5 Design Implementation Constraints</a>
+            <a href="#2.6">2.6 User Documentation</a>
+            <a href="#2.7">2.7 Assumptions and Dependencies</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 3.  External Interface Requirements
+    <i class="fa fa-caret-down"></i>
+</button>
+        <div class="dropdown-container">
+            <a href="#3.1">3.1 User Interface</a>
+            <a href="#3.2">3.2 Hardware Interface</a>
+            <a href="#3.3">3.3 Software Interface</a>
+            <a href="#3.4">3.4 Communication Interface</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 4.  System Features
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#4.1">4.1 System Features</a>
+            <a href="#4.2">4.2 System Feature 2</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 5.  Other Nonfunctional Requirements
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#5.1">5.1 Performance Requirements</a>
+            <a href="#5.2">5.2 Safety Requirements</a>
+            <a href="#5.3">5.3 Security Requirements</a>
+            <a href="#5.4">5.4 Software Quality Attributes</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 6.  Other Requirements
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#6.1">6.1 Appendix A: Glossary</a>
+            <a href="#6.2">6.2 Appendix B: Analysis Models</a>
+            <a href="#6.3">6.3 Appendix C: To be Determined List</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="tittle">
+            <h2>Software Requirements Specification</h2>
+            <h4 class="Names">Prepared By : <br><br> Muhtasim Rahman<br><br> Sany Mohammad Khaled <br><br> Shahidul Alam </h4>
+        </div>
+        <h2>Introduction</h2>
+        <div class="section">
+            <h4 id="1.1">1.1 Purpose</h4>
+            <p>The objective of the LPG Distribution Management Application is to bring on most of the LPG Distributor company under one application where customer can find all the necessary products, compare price and quality in one place. </p>
+
+            <h4 id="1.2">1.2 Document Convention</h4>
+            <p>The typographical convention in this SRS contains the standard I EEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998
+            </p>
+
+            <h4 id="1.3">1.3 Intended Audience and Reading Suggestions</h4>
+            <p>The project is a prototype for the LPG Distribution Management. This project is useful for customers who uses LPG as primary source of energy.
+            </p>
+
+            <h4 id="1.4">1.4 Product Scope</h4>
+            <p>The purpose of the LPG Distribution Management is to bring on most of the LPG companies under one application.It is difficult for
+                users to compare different companies product prices and quality. It is also hard to maintain. It would be beneficial for the customer if he/she can find all the companies, compare price and quality and they do not have think about refill . This application is the solution to that problem. </p>
+        </div>
+
+        <h2>Overall Description</h2>
+        <div class="section">
+            <h4 id="2.1">2.1 Product Perspective</h4>
+            <p>A distributive Liquified Petroleum Gas management system system stores the following information:
+                <li style="font-size: 17px;"><b>LPG center Details</b></li>
+                It includes Products, Live Pricing, Shop's Live location. <br> <br>
+                <li style="font-size: 17px;"><b>Customers Description</b></li>
+                It includes customers Name, Address, Email, Phone number. This information may be used for keeping the records of the customer for any emergency or any other kind of information. <br> <br>
+                <li style="font-size: 17px;"><b>Track Cylinder</b></li>
+                It includes details of cylinder with a unique code
+            </p>
+                <li style="font-size: 17px;"><b>Push Notification</b></li>
+                Email/Phone Number will be used to send purchase confirmation and refill notification.
+            </p>
+            <h4 id="2.2">2.2 Product Function</h4>
+            <p>The significant features of the LPG Distribution Management system shown below: </p>
+            <ol>
+                <li>Admin/User Dashboard</li>
+                <li>Customer/Admin Login/Signup Panel</li>
+                <li>Search Product</li>
+                <li>Live Pricing</li>
+                <li>Advance Booking</li>
+                <li>Cart Details </li>
+                <li>Payment Gateway</li>
+                <li>Refill Notifier</li>
+                <li>Customer Review</li>
+            </ol>
+
+            <h4 id="2.3">2.3 User Class and Characteristics</h4>
+            <p>This system would be able to search for any brands, compare prices, Check avability, get the shop locations, and order any product if available in store. The system will support two types of user privileges, Customer and Provider. Customers
+                will have access to customer functions, and Provider will have access to both customer and customer. The customer should be able to do the following tasks:</p>
+            <ul>
+                <li>Check Availability</li>
+                <li>Compare Price</li>
+                <li>Advanced Bokking</li>
+                <li>Get Shop Location</li>
+                <li>Place Order</li>
+                <li>Get Servicing</li>
+            </ul>
+            <p>An employee should have the following management function:</p>
+            <p><b>Customer Function:</b></p>
+            <ul>
+                <li>View all the information of customers </li>
+                <li> View all order details</li>
+                <li>Monitor Cylinders</li>
+                <li>Customer Support</li>
+            </ul>
+            <p><b>Administrative:</b></p>
+            <ul>
+                <li>Add/Remove Shop</li>
+                <li>Add/Remove Customer</li>
+                <li>Update pricing list</li>
+                <li>Add Add/Remove Product</li>
+                <li>Push Refill Notification</li>
+                <li>Customer Support</li>
+
+            </ul>
+            <img src="UseCasee.jpg" alt="UseCaseDiagram" style="display: block;margin-left: auto; margin-right: auto;width: 50%;">
+            <h4 id="2.4">2.4 Operating Enviornment</h4>
+            <p> Operating environment for the LPG Distribution Management system is as listed below. </p>
+
+            <ul>
+                <li>Server: Localhost(Initial) </li>
+                <li>Operating System: Windows & MAC</li>
+                <li>Database: MySQL</li>
+                <li>Front-end : HTML,CSS,JS,BootStrap, Blade Template</li>
+                <li>Backend : Php & Laravel</li>
+                <li>Version Control : Git,Github</li>
+            </ul>
+            <h4 id="2.5">2.5 Design Implementation Constraints</h4>
+            <ul>
+                <li>SQL commands for queries </li>
+                <li>Response for queries</li>
+                <li>SSLCOMMEREZ integration for payment</li>
+                <li>Database implementation</li>
+            </ul>
+            <h4 id="2.6">2.6 User Documentation</h4>
+            <p>As a visitor you will have two option. Visit our site and create new account. After creating account you will redirect to Dashboard where you can search any item,compare price and purchase anything. You can also subscribe to our Offer notification.You
+                will also find shop near you and navigation also. In case of any problem or emergency, or need advanced booking, you can get help via customer support option.Thank You</p>
+            <h4 id="2.7">2.7 Assumptions and Dependencies</h4>
+            <ul>
+                <li> We assume our users are from Bangladesh</li>
+                <li>We assume customers uses LPG as primary source</li>
+                <li>We assume users know Basic English</li>
+                <li>We assume user will use modern browser</li>
+                <li>We assume customers supports GPS</li>
+            </ul>
+        </div>
+
+        <h2>External Interface Requirements</h2>
+        <div class="section">
+            <h4 id="3.1">3.1 User Interface</h4>
+            <p>Front-end software: HTML, CSS, JS , BootStrap <br><br> Backend software: PHP,SQL,Laravel</p>
+            <h4 id="3.2">3.2 Hardware Interface</h4>
+            <ul>
+                <li>Windows</li>
+                <li>Any Modern Browser</li>
+            </ul>
+            <h4 id="3.3">3.3 Software Interface</h4>
+            <p> Following software are used for Our Management system</p>
+            <ul>
+                <li>Operating system: Windows/Mac</li>
+                <li>Database: MySQL</li>
+                <li>Framework: Laravel</li>
+            </ul>
+            <h4 id="3.4">3.4 Communication Interface</h4>
+            <p>This project supports all types of modern web browsers. We are using a simple Search pattern and online purchase system with payment gateway and API integration</p>
+        </div>
+
+        <h2>System Features</h2>
+        <div class="section">
+            <h4 id="4.1">4.1 System Features</h4>
+            <p>Our system maintains information about various LPG providers all around the country , live pricing, compare prices, and Cylinder tracking and many more </p>
+            <p><b>Response sequence</b></p>
+            <ul>
+                <li>Search for any item across all the Stores</li>
+                <li>Search Nearby Shop's location</li>
+                <li>Display a piece of detailed information about products in the nearby area</li>
+                <li>Place an order or cancel it.</li>
+            </ul>
+
+            <h4 id="4.2">4.2 System Feature 2</h4>
+        </div>
+
+        <h2>Other Nonfunctional Requirements</h2>
+        <div class="section">
+            <h4 id="5.1">5.1 Performance Requirements</h4>
+            <p>The system should provide live data to the requesting client at a rate of about 1HZ. The response time should be less than 3 seconds. All the other performance, such as storage and memory, should follow industry recommended practices to ensure
+                resource requirements.</p>
+            <h4 id="5.2">5.2 Safety Requirements</h4>
+            <p>If there is extensive damage to a large portion of the database due to any problem, the automated recovery method restores a past copy of the database to run our app without any problem</p>
+            <h4 id="5.3">5.3 Security Requirements</h4>
+            <p>The security system needs database storage, just like any other application. Vendors must choose their database partner carefully</p>
+            <h4 id="5.4">5.4 Software Quality Attributes</h4>
+            <p><b>Availability:</b> The products, shop details, price list, Refill information should be available all the time. <br> <br>
+                <b>Correctness:</b> The price on our app and the cost of the main site from where we fetch data should be the same. <br> <br>
+                <b>Maintainability:</b> The administrator should update all the information about the product, shop offers, and price. <br> <br>
+                <b>Usability:</b> The web app should save customer's money and time and also should give them satisfaction.</p>
+        </div>
+
+        <h2>Other Requirements</h2>
+        <div class="section">
+            <h4 id="6.1">6.1 Appendix A: Glossary</h4>
+            <h4 id="6.2">6.2 Appendix B: Analysis Models</h4>
+            <h4 id="6.3">6.3 Appendix C: To be Determined List </h4>
+        </div>
+    </div>
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

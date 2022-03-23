@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #34495e;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a:hover {
+    background-color: #111;
+    text-decoration: underline
+}
+
+.active {
+    text-decoration: underline;
+}
+
+
+/* Navbar Ends */
